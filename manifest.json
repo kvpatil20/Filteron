@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Filteron",
+  "icons": {"16": "icon_16.png",
+            "48" : "icon_48.png",
+            "128": "icon_128.png"
+  },
+  "version": "0.1.0",
+  "description": "A Chrome extension that segregates comments into positive and negative ones.",
+
+  "browser_action": {
+	"default_icon": "icon_16.png",
+	"default_popup": "popup.html",
+	"default_title": "Filteron"
+	},
+ 
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["https://*/*", "http://*/*"]
+  }
+],
+
+  "permissions": [
+          "cookies",
+          "*://*.google.com"
+        ]
+
+}
