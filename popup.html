@@ -11,73 +11,73 @@
 <style>
  body
  {
-   background-color: #ffa231;
+   color: black;
+		height: 472px;
+		width: 455px;
  }
  .centered
  {
-   float: center;
+   float: left;
    width: 420px;
-   height: 445px;
-   background-color: white;
+   height: 447px;
+   background-image: url("amazonpage1.png");
    border-radius: 5px;
-   margin: 36%;
-   margin-top: 5%;
-   margin-bottom: 5%;
+ 
    border-style: solid;
    border-width: 20px;
    border-color: rgb(223,215,215);
  }
  .options
  {
+  float: left;
+  color: black;
+		padding: 6px 15px;
+		border-width: 2px;
+		margin: 0 6px 6px 6px;
+		background-color: rgba(255,255,255,.8);
+		height: 224px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
  }
- .submitB
+
+ h2
  {
- border:1px solid #ffad41;
- border-radius: 3px;
- font-size:12px;
- font-family:arial, helvetica, sans-serif; 
- padding: 10px 10px 10px 10px; display:inline-block;
- text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
- font-weight:bold; 
- color: #FFFFFF;
- background-color: #ffc579; 
- background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc579), to(#fb9d23));
- background-image: -webkit-linear-gradient(top, #ffc579, #fb9d23);
- background-image: -moz-linear-gradient(top, #ffc579, #fb9d23);
- background-image: -ms-linear-gradient(top, #ffc579, #fb9d23);
- background-image: -o-linear-gradient(top, #ffc579, #fb9d23);
- background-image: linear-gradient(to bottom, #ffc579, #fb9d23);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffc579, endColorstr=#fb9d23);
+ margin-left:130px;
  }
- 
- .submitB: hover
- {
-  border:1px solid #ff9913;
- background-color: #ffaf46; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffaf46), to(#e78404));
- background-image: -webkit-linear-gradient(top, #ffaf46, #e78404);
- background-image: -moz-linear-gradient(top, #ffaf46, #e78404);
- background-image: -ms-linear-gradient(top, #ffaf46, #e78404);
- background-image: -o-linear-gradient(top, #ffaf46, #e78404);
- background-image: linear-gradient(to bottom, #ffaf46, #e78404);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffaf46, endColorstr=#e78404);
- }
+
+.category { list-style: none; }
+.category li { margin-right: 10px; margin-left: 70px }
+.category span { border: 1px solid #ccc; float: left;font-size: 10px; width: 12px; height: 12px; margin : 2px; }
+
+.category .positive { background-color: yellow; }
+.category .negative { background-color: cyan; }
+
 
 </style>
 
 </head>
 
 <body>
+
+ 
  <div class="centered">
-  <img src="C:\Users\kruti\workspace\ChromeExtension\icon_128.png" alt="Filtron Icon" style="width:150px;height:150px; display: block;
+  <img src="icon_128.png" alt="Filtron Icon" style="width:150px;height:150px; display: block;
    margin: 0 auto;">
+   <br>
    <div class="options">
-     <h2>I want to see... </h2>
-     <form>
-       <input type="radio" name="category" value="positive" id="positive"> Positive Comments<br>
-       <input type="radio" name="category" value="negative" id="negative"> Negative Comments<br>
-       <input type="radio" name="category" value="all" id="all"> All Comments<br>
-       <input id="submitB" type="submit" value="Submit">
-     </form>
+     <h2>   You will see... </h2>
+     
+      <ul class="category">
+    	<li><span class="positive"></span><font size="4">&nbsp; Positive Comment</font></li><br>
+    	<li><span class="negative"></span><font size="4">&nbsp; Negative Comment</font></li>
+     </ul>
+   
    </div>
  </div>
+
+
 </body>
+
+<script type="text/javascript" src="content.js"></script>
 
 </html>
